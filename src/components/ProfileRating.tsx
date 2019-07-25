@@ -1,14 +1,24 @@
-import React from "react";
-import { Icon } from "semantic-ui-react";
+import React, { Component } from "react";
+import { Rating } from "semantic-ui-react";
+import styled from "@emotion/styled";
 
-const ProfileRating = () => (
-  <div>
-    <Icon name="star" circular />
-    <Icon name="star" circular />
-    <Icon name="star" circular />
-    <Icon name="star" circular />
-    <Icon name="star" circular />
-  </div>
-);
+const RatingContainer = styled.div`
+  margin: auto;
+  background-color: red;
+`;
 
-export default ProfileRating;
+export default class ProfileRating extends Component {
+  state = { rating: 3 };
+
+  handleChange = e => this.setState({ rating: e.target.value });
+
+  render() {
+    /*  const { rating } = this.state; */
+
+    return (
+      <RatingContainer>
+        <Rating icon="star" rating={this.state.rating} maxRating={5} />
+      </RatingContainer>
+    );
+  }
+}
