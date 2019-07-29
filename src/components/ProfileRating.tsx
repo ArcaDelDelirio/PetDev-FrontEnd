@@ -2,10 +2,7 @@ import React, { Component } from "react";
 import { Rating } from "semantic-ui-react";
 import styled from "@emotion/styled";
 
-const RatingContainer = styled.div`
-  margin: auto;
-  background-color: red;
-`;
+const RatingContainer = styled.div``;
 
 export default class ProfileRating extends Component {
   state = { rating: 3 };
