@@ -3,6 +3,7 @@ import ProfilePic from "./ProfilePic";
 import ProfileRating from "./ProfileRating";
 import ProfileInfo from "./ProfileInfo";
 import ProfileSettingsButton from "./ProfileSettingsButton";
+
 import styled from "@emotion/styled";
 
 const StyledBody = styled.div`
@@ -19,7 +20,7 @@ const StyledBody = styled.div`
 `;
 const StyledSettings = styled.div`
   display: relative;
-  margin-left: 75%;
+  margin-left: 80%;
   margin-top: 3%;
 `;
 const ProfileBody = () => (
