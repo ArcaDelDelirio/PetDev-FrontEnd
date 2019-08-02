@@ -1,14 +1,19 @@
 import React from 'react'
 import { InputSearchHomePage } from '../components/forms/InputSearchHomePage';
-import MainMap from '../components/maps/MainMap';
+import AutoCompleteSearch from '../components/forms/AutoCompleteSearch';
+import MapWithAutoComplete from '../components/forms/MapWithAutoComplete';
 
 export default class Home extends React.Component {
 
     render() {
         return (
             <div>
-                <InputSearchHomePage />
-                <MainMap />
+                {/* <InputSearchHomePage /> */}
+                {/* <AutoCompleteSearch/>   */}
+                <MapWithAutoComplete google={this.props.google}
+     center={{lat: 28.46, lng: -16.27}}
+     height='300px'
+     zoom={15}/>              
 
             </div>
         )
