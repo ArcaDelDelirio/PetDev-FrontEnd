@@ -164,7 +164,8 @@ class MapWithAutoComplete extends React.Component{constructor( props ){
   console.log( 'event', event );
   let newLat = event.latLng.lat(),
    newLng = event.latLng.lng(),
-   addressArray = [];Geocode.fromLatLng( newLat , newLng ).then(
+   addressArray = [];
+   Geocode.fromLatLng( newLat , newLng ).then(
    response => {
     const address = response.results[0].formatted_address,
      addressArray =  response.results[0].address_components,
